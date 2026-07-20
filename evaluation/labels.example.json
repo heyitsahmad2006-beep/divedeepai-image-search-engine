@@ -1,0 +1,7 @@
+[
+  {
+    "query": "cute dog",
+    "k": 5,
+    "relevant_images": ["dog_001.jpg", "dog_002.jpg"]
+  }
+]

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DiveDeepAI Project 1 — Visual Image Search</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="nav">
+    <a class="brand" href="/"><span class="brand-mark">D</span><span>DiveDeepAI <small>Project 1</small></span></a>
+    <div class="nav-actions">
+      <span id="indexBadge" class="badge"><i></i> Checking index</span>
+      <a class="docs-link" href="/docs">API Docs</a>
+      <button id="themeToggle" class="icon-button" type="button" aria-label="Switch theme">
+        <span class="sun">☀</span><span class="moon">☾</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">AI-POWERED VISUAL DISCOVERY</div>
+      <h1>Find the image you imagined.</h1>
+      <p class="subtitle">Search thousands of images using natural language. CLIP understands the idea; FAISS finds it instantly.</p>
+      <form id="search" class="search-shell">
+        <span class="search-icon">⌕</span>
+        <input id="query" autocomplete="off" placeholder="Describe an image — e.g. a red sports car" required>
+        <label class="count-label">Results <input id="topK" type="number" value="20" min="1" max="50"></label>
+        <button class="search-button"><span>Search</span><span class="arrow">→</span></button>
+      </form>
+      <div class="suggestions"><span>Try</span>
+        <button type="button">snowy mountains</button><button type="button">classic car</button>
+        <button type="button">cute animal</button><button type="button">modern architecture</button>
+      </div>
+    </section>
+
+    <section class="results-area">
+      <div class="results-heading"><div><h2 id="resultsTitle">Explore the collection</h2><p id="status">Enter a description to begin.</p></div><div id="latency" class="latency"></div></div>
+      <div id="results" class="results-grid"><div class="empty-state"><div>✦</div><p>Your visual matches will appear here</p></div></div>
+    </section>
+  </main>
+  <footer><span>DiveDeepAI Project 1</span><span>Powered by CLIP + FAISS</span></footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>
